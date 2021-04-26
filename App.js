@@ -7,19 +7,19 @@ import ImageScreen from "./src/screens/ImageScreen";
 import CounterScreen from "./src/screens/CounterScreen";
 
 const navigator = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Components: ComponentsScreen,
-    List: ListScreen,
-    Image: ImageScreen,
-    Counter: CounterScreen,
-  },
-  {
-    initialRouteName: "Home",
-    defaultNavigationOptions: {
-      title: "App",
+    {
+        Home: HomeScreen,
+        Components: ComponentsScreen,
+        List: ListScreen,
+        Image: ImageScreen,
+        Counter: CounterScreen,
     },
-  }
+    {
+        initialRouteName: "Home",
+        defaultNavigationOptions: {
+            title: "App",
+        },
+    }
 );
 
 export default createAppContainer(navigator);
