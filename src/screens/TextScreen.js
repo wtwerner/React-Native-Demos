@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 const TextScreen = () => {
+    const [password, setPassword] = useState('');
+
     return (
         <View>
-            <TextInput style={styles.input} />
+            <Text>Enter password:</Text>
+            <TextInput
+                style={styles.input}
+                autoCapitalize="none"
+                autoCorrect={false}
+                value={password}
+                onChangeText={(newValue) => setPassword(newValue)}
+            />
+            {password.length < 5 ? <Text>Password must be at least 5 characters</Text> : null}
         </View>
     );
 };
